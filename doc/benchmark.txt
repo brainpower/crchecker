@@ -1,0 +1,27 @@
+20 files of around 350M, warm fs cache.
+
+[even older Python version, uses zlib too]
+user: 4,291 system: 0,348 cpu: 99% total: 4,659
+user: 4,321 system: 0,355 cpu: 98% total: 4,752
+user: 4,399 system: 0,289 cpu: 99% total: 4,711
+
+[very old C version]
+user: 4,503 system: 0,725 cpu: 98% total: 5,294
+user: 4,683 system: 0,673 cpu: 99% total: 5,363
+user: 4,706 system: 0,604 cpu: 99% total: 5,343
+
+[50f1ac6 initial commit]
+user: 4,708 system: 0,646 cpu: 99% total: 5,361
+user: 4,591 system: 0,675 cpu: 99% total: 5,300
+user: 4,505 system: 0,699 cpu: 99% total: 5,212
+
+[4383d99 build with aws-checksums]
+user: 1,131 system: 0,396 cpu: 99% total: 1,529
+user: 1,196 system: 0,310 cpu: 99% total: 1,508
+user: 1,169 system: 0,339 cpu: 99% total: 1,512
+
+[4383d99 build with zlib]
+user: 2,410 system: 0,373 cpu: 99% total: 2,787
+user: 2,268 system: 0,412 cpu: 98% total: 2,711
+user: 2,374 system: 0,342 cpu: 99% total: 2,720
+
