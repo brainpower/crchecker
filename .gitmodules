@@ -1,0 +1,3 @@
+[submodule "3rdparty/checkarg"]
+	path = 3rdparty/checkarg
+	url = git@github.com:brainpower/checkarg.git

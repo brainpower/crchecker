@@ -1,0 +1,2 @@
+option('tests', type: 'feature', value: 'disabled')
+option('with-checkarg', type: 'string', value: 'system')
