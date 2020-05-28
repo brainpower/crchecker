@@ -31,7 +31,7 @@ int         cols();
 
 bool        file_readable(const std::string &file);
 
-uLong       do_crc32(const std::string &filename);
+uint32_t    do_crc32(const std::string &filename);
 
 std::string get_crc_from_name(const std::string &filename);
 

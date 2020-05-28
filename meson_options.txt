@@ -1,2 +1,3 @@
 option('tests', type: 'feature', value: 'disabled')
+option('force-zlib', type: 'boolean', value: 'false')
 option('with-checkarg', type: 'string', value: 'system')
