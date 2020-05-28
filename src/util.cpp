@@ -35,7 +35,6 @@
 
 #include <cstring>
 
-#define unlikely(x)     __builtin_expect((x),0)
 
 using FilePtr = std::unique_ptr<FILE, int (*)(FILE*)>;
 
@@ -60,7 +59,8 @@ uint32_t do_crc32_aws(FilePtr fin) {
 
   while( 1 ) {
     nread = fread(buff, 1, BUFFLEN, fin.get());
-    if ( nread < BUFFLEN ) { // mark unlikely?
+
+    if ( nread < BUFFLEN ) {
       // something is unusual
       if ( feof(fin.get()) ) {
         // we reached the end! one last round of CRCing:
@@ -91,18 +91,17 @@ do_crc32_zlib(FilePtr fin){
     nread = fread(buff, 1, BUFFLEN, fin.get());
     //printf("[DEBUG] read %lu bytes.\n", nread);
 
-    if( nread < BUFFLEN){ // something is up!
+    if( nread < BUFFLEN ){ // something is up!
 
-      if( ferror(fin.get()) ) { // uh-uh, an error!
-        perror("[ERROR] An error occurred while reading the file: ");
-        return 0;
-      }
-      else if( feof(fin.get()) ) {
+      if( feof(fin.get()) ) {
         // puh! only a EOF
         // do a last crc call and off we go!
         return crc32( crc, buff, nread );
       }
-      else {
+      else if( ferror(fin.get()) ) { // uh-uh, an error!
+        perror("[ERROR] An error occurred while reading the file: ");
+        return 0;
+      } else {
         perror("[ERROR] An unknown error occurred!");
         return 0;
       }
