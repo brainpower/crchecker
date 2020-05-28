@@ -10,7 +10,7 @@ or alternatively good old zlib.
 Be aware that aws-checksums will be a lot faster if you have a modern CPU with SSE4.1 or SSE4.2,
 for older CPUs zlib may be faster, I have not tested it yet.
 
-On my Ryzen 9 3900X aws-checksums is about twice as fast, see [doc/benchmark.txt] for details.
+On my Ryzen 9 3900X aws-checksums is about twice as fast, see [doc/benchmark.txt](doc/benchmark.txt) for details.
 
 ### Build from git
 
