@@ -6,7 +6,7 @@
 #ifndef CRC_CHECKER_CONSTANTS_HPP
 #define CRC_CHECKER_CONSTANTS_HPP
 
-constexpr short BUFFLEN = 4096;
+constexpr int BUFFLEN = 4096 * 1024;
 constexpr char CRCLEN = 8; // a CRC32 has 8 chars when displayed as HEX
 constexpr const char *OK = "[ ok ]";
 constexpr const char *FAIL = "[fail]";

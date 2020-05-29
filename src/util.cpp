@@ -37,7 +37,7 @@ file_readable(const std::string &file) {
 uint32_t do_crc32_aws(FilePtr fin) {
   uint8_t buff[BUFFLEN];
   size_t  nread;
-  uint32_t crc = aws_checksums_crc32(nullptr, 0, 0L);
+  uint32_t crc = aws_checksums_crc32c(nullptr, 0, 0L);
 
   while( 1 ) {
     nread = fread(buff, 1, BUFFLEN, fin.get());

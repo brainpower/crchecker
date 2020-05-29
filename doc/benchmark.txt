@@ -25,3 +25,12 @@ user: 2,410 system: 0,373 cpu: 99% total: 2,787
 user: 2,268 system: 0,412 cpu: 98% total: 2,711
 user: 2,374 system: 0,342 cpu: 99% total: 2,720
 
+[bigger buffers 4M with aws-checksums]
+user: 1,059 system: 0,290 cpu: 99% total: 1,350
+user: 1,069 system: 0,280 cpu: 99% total: 1,351
+user: 1,072 system: 0,267 cpu: 99% total: 1,348
+
+[bigger buffers 4M with zlib]
+user: 2,369 system: 0,290 cpu: 99% total: 2,661
+user: 2,394 system: 0,285 cpu: 99% total: 2,692
+user: 2,444 system: 0,213 cpu: 99% total: 2,659

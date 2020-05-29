@@ -7,7 +7,7 @@ A small tool to check files with crc32 hashes in their filenames for correctness
 The tool depends on either the aws-checksums library: [awslabs/aws-checksums](https://github.com/awslabs/aws-checksums)
 or alternatively good old zlib.
 
-Be aware that aws-checksums will be a lot faster if you have a modern CPU with SSE4.1 or SSE4.2,
+Be aware that aws-checksums will be a lot faster if you have a modern CPU,
 for older CPUs zlib may be faster, I have not tested it yet.
 
 On my Ryzen 9 3900X aws-checksums is about twice as fast, see [doc/benchmark.txt](doc/benchmark.txt) for details.
