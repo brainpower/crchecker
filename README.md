@@ -12,6 +12,11 @@ for older CPUs zlib may be faster, I have not tested it yet.
 
 On my Ryzen 9 3900X aws-checksums is about twice as fast, see [doc/benchmark.txt](doc/benchmark.txt) for details.
 
+I may consider implementing mmapped io instead of normal fopen(), if it makes any difference.
+Problem is, on small files fopen is faster, since it needs a lot less time to set up it's ressources.
+Big files may benefit, so if it gets implemented, there'll be a minimal file size,
+with everything below staying with fopen().
+
 ### Build from git
 
     git clone https://github.com/brainpower/crchecker.git --recurse-submodules
